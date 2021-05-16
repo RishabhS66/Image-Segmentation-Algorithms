@@ -103,8 +103,7 @@ for m = 1:8
         if(lab == -1)
             lab = J(x,y); %First neighbour with label is found, so its label is assigned to center pixel
         else
-            lab = 0;
-            %lab = min(J(x,y),lab); %If multiple label candidates are found, select the smallest
+            lab = min(J(x,y),lab); %If multiple label candidates are found, select the smallest
         end
     end
 end
